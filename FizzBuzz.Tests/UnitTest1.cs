@@ -21,7 +21,7 @@ namespace Tests
         }
 
         [Test]
-        public void Returns_Fizz_For_Multiple_Of_3()
+        public void Fizz_For_Multiple_Of_3()
         {
             Assert.Multiple(() =>
             {
@@ -31,12 +31,22 @@ namespace Tests
         }
 
         [Test]
-        public void Returns_Buzz_For_Multiple_Of_5()
+        public void Buzz_For_Multiple_Of_5()
         {
             Assert.Multiple(() =>
             {
                 Assert.That(program.FizzBuzz(5), Is.EqualTo("Buzz"));
                 Assert.That(program.FizzBuzz(10), Is.EqualTo("Buzz"));
+            });
+        }
+
+        [Test]
+        public void FizzBuzz_For_Multiples_Of_Both()
+        {
+            Assert.Multiple(() =>
+            {
+                Assert.That(program.FizzBuzz(15), Is.EqualTo("FizzBuzz"));
+                Assert.That(program.FizzBuzz(30), Is.EqualTo("FizzBuzz"));
             });
         }
     }
