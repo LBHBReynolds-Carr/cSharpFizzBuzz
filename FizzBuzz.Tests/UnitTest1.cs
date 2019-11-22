@@ -36,7 +36,7 @@ namespace Tests
             Assert.Multiple(() =>
             {
                 Assert.That(program.FizzBuzz(5), Is.EqualTo("Buzz"));
-                
+                Assert.That(program.FizzBuzz(10), Is.EqualTo("Buzz"));
             });
         }
     }

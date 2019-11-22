@@ -10,7 +10,7 @@ namespace cSharpFizzBuzz
             {
                 return "Fizz";
             }
-            else if (n == 5)
+            else if (n % 5 == 0)
             {
                 return "Buzz";
             } 
