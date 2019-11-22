@@ -4,15 +4,19 @@ namespace cSharpFizzBuzz
 {
     public class Program
     {
-        public object FizzBuzz(int n)
+        public string FizzBuzz(int n)
         {
-            if (n % 3 == 0)
+            if (n % 3 == 0) 
             {
                 return "Fizz";
             }
-            else
+            else if (n == 5)
             {
-                return n;    
+                return "Buzz";
+            } 
+            else 
+            {
+                return n.ToString();
             }
         }
     }

@@ -15,21 +15,29 @@ namespace Tests
         }
 
         [Test]
-        public void FizzBuzz_Returns_Number()
+        public void Returns_Number()
         {
-            Assert.AreEqual(1, program.FizzBuzz(1));
+            Assert.That(program.FizzBuzz(1), Is.EqualTo("1"));
         }
 
         [Test]
-        public void FizzBuzz_Returns_Fizz_For_3()
+        public void Returns_Fizz_For_Multiple_Of_3()
         {
-            Assert.AreEqual("Fizz", program.FizzBuzz(3));
+            Assert.Multiple(() =>
+            {
+                Assert.That(program.FizzBuzz(3), Is.EqualTo("Fizz"));
+                Assert.That(program.FizzBuzz(6), Is.EqualTo("Fizz"));
+            });
         }
 
         [Test]
-        public void FizzBuzz_Returns_Fizz_For_6()
+        public void Returns_Buzz_For_Multiple_Of_5()
         {
-            Assert.That(program.FizzBuzz(6), Is.EqualTo("Fizz"));
+            Assert.Multiple(() =>
+            {
+                Assert.That(program.FizzBuzz(5), Is.EqualTo("Buzz"));
+                
+            });
         }
     }
 }
